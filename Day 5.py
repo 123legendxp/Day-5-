@@ -25,7 +25,7 @@ while True:
             print(commands) 
     elif command == "DISPLAY":
         print(commands)
-    elif command == "QUIT":
+    elif command == "HAWA":
         break
     else:
         commands.append(command)
