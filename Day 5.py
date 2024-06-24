@@ -1,4 +1,4 @@
-def enter_boss(number, queue):
+def enter_num(number, queue):
     if number not in queue:
         queue.append(number)
         if len(queue) > 5:
@@ -25,6 +25,8 @@ while True:
             print(commands) 
     elif command == "DISPLAY":
         print(commands)
+    elif command == "QUIT":
+        break
     else:
         commands.append(command)
         print(commands)
