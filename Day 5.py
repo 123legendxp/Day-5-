@@ -6,14 +6,14 @@ def enter_num(number, queue):
 
 queue = []
 
-clicks = [0]
+static = []
 
 commands = []
 while True:
     command = input("COMMAND: ")
     if command.startswith("3"):
-        num = command.split()[-1]
-        commands.append(num)
+        number = command.split()[-1]
+        commands.append(number)
         print(commands)
     elif command == "NAA":
         if commands:
