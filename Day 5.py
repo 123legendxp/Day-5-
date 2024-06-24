@@ -1,13 +1,30 @@
-add_status = "1"
+def enter_boss(number, queue):
+    if number not in queue:
+        queue.append(number)
+        if len(queue) > 5:
+            queue.pop(0)
 
-if add_status == "1":
-    print("1, 2, 3.")
-    for task in range(1, 6):
-        print(f"QUEUE NAA {task}")
-    print("2, 3")
-    for station in range(1, 6):
-        print(f"STACK NAA {station}")
-else:
-    print("NAA")
-    print("2, 3, 4, 6, 7, 8")
+queue = []
 
+clicks = [0]
+
+commands = []
+while True:
+    command = input("COMMAND: ")
+    if command.startswith("3"):
+        num = command.split()[-1]
+        commands.append(num)
+        print(commands)
+    elif command == "NAA":
+        if commands:
+            commands.pop(0)
+        print(commands)
+    elif command == "WALA":
+        if commands:
+            commands.pop()   
+            print(commands) 
+    elif command == "DISPLAY":
+        print(commands)
+    else:
+        commands.append(command)
+        print(commands)
